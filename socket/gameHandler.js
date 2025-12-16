@@ -186,8 +186,7 @@ export function initializeGameSocket(io) {
           return;
         }
 
-        room.startGame();
-        room.nextQuestion(); // Move to first question
+        room.startGame(); // This sets currentQuestionIdx to 0 (first question)
 
         const question = room.getCurrentQuestion();
         if (!question) {
